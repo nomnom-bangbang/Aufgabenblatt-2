@@ -1,0 +1,52 @@
+/*
+    Aufgabe2) Eingabe (Scanner)
+
+    Erweitern Sie die main-Methode so, dass wiederholt Werte eingelesen werden,
+    bis die Zahl 0 eingegeben wird. Dann wird das Programm beendet. Zuvor wird
+    noch der Durchschnittswert aller eingelesenen Zahlen als ganzzahliger Wert
+    ausgegeben (Nachkommastellen gehen verloren),  falls alle eingelesenen Werte
+    ganze Zahlen waren. In allen anderen Fällen wird nichts ausgegeben.
+
+    Zusatzfragen:
+    1. Warum muss eine ungültige Eingabe (keine ganze Zahl) aus dem
+    Input-Stream entfernt werden?
+    2. Woran kann man erkennen, dass ein eingelesener Wert eine ganze Zahl ist?
+    3. Woran kann man feststellen, ob eine frühere Eingabe ungültig war?*/
+
+
+
+import java.util.Scanner;
+
+public class Aufgabe2 {
+
+    public static void main(String[] args) {
+        // TODO: Implementieren Sie hier die Angabe
+
+        System.out.println("Finde die geheime Zahl! Bitte eingeben! Ende mit ^D");
+
+        Scanner scanner = new Scanner(System.in);
+        int num = (int) (Math.random() * 100) + 1;
+        int test = 0;
+        int count = 0;
+        int sum = 0;
+        int schnitt = sum/count;
+
+        while (num != test && scanner.hasNextInt) {
+            count = count + 1;
+            if (scanner.hasNextInt()) {
+                test = scanner.nextInt();
+                if (num < test) {
+                    System.out.println("Zahl ist kleiner");
+                } else if (num > test) {
+                    System.out.println("Zahl ist größer");
+                } else {
+                    System.out.println("Gratulation! Zahl gefunden!");
+                }
+            } else {
+                String wrong = scanner.next();
+                System.out.println(schnitt);
+            }
+        }
+
+    }
+}
